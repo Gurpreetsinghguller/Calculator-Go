@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<h1>SIMPLE CALCULATOR</h1>
+	
 	<div id="container">
     <div id="Calculator">
     <div id="result">
@@ -43,36 +43,5 @@
     </div>
     </div>
 <script src="javascript.js"></script>
-<script>
-	operands=[];
-	operator=[];
-	//Clear function
-	var operator=document.getElementsByClassName("operator")
-	for (var i = 0; i <operator.length; i++) {
-			operator[i].addEventListener('click',function(){
-				if(this.id=="clear"){
-				printOutput("");
-				printHistory("");
-			}
-		})
-	}
-
-	//Getting operands
-	var number=document.getElementsByClassName('number');
-	for (var i = 0; i < number.length; i++) {
-		number[i].addEventListener('click',function()
-		{
-			var output=reverseFormattedNumber(getOutput());
-		if(output!=NaN)
-		{
-			output=output+this.id;
-			operands.push(output)
-			
-		}
-		}
-		)
-	}
-	console.log(operands)
-	</script>
-	</body>
-	</html>
+</body>
+</html>
